@@ -71,6 +71,11 @@ public class LoginStep extends BaseUtil{
         Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
     }
 
+    @Then("I should close the chrome page$")
+    public void closeChromePage() {
+        base.Driver.quit();
+    }
+
 
     public class User {
         public String username;

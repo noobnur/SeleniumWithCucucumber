@@ -6,17 +6,13 @@ formatter.feature({
   "id": "loginfeature",
   "keyword": "Feature"
 });
-formatter.before({
-  "duration": 9656346811,
-  "status": "passed"
-});
-formatter.scenario({
+formatter.scenarioOutline({
   "line": 4,
   "name": "Login with correct username and password",
   "description": "",
   "id": "loginfeature;login-with-correct-username-and-password",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
   "line": 5,
@@ -26,6 +22,252 @@ formatter.step({
 formatter.step({
   "line": 6,
   "name": "I enter the following for Login",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 7
+    },
+    {
+      "cells": [
+        "\u003cusername\u003e",
+        "\u003cpassword\u003e"
+      ],
+      "line": 8
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "I click login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "I should see the userform page",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 12,
+      "value": "#  Scenario: Login with correct username and password to fail"
+    },
+    {
+      "line": 13,
+      "value": "#    Given I navigate to the login page"
+    },
+    {
+      "line": 14,
+      "value": "#    And I enter the following for Login"
+    },
+    {
+      "line": 15,
+      "value": "#      | username | password      |"
+    },
+    {
+      "line": 16,
+      "value": "#      | admin    | adminpassword |"
+    },
+    {
+      "line": 17,
+      "value": "#    And I click login button"
+    },
+    {
+      "line": 18,
+      "value": "#    Then I should see the userform page wrongly"
+    }
+  ],
+  "line": 20,
+  "name": "I should close the chrome page",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 22,
+  "name": "",
+  "description": "",
+  "id": "loginfeature;login-with-correct-username-and-password;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 23,
+      "id": "loginfeature;login-with-correct-username-and-password;;1"
+    },
+    {
+      "cells": [
+        "justin",
+        "adminpassword"
+      ],
+      "line": 24,
+      "id": "loginfeature;login-with-correct-username-and-password;;2"
+    },
+    {
+      "cells": [
+        "admin",
+        "adminpassword"
+      ],
+      "line": 25,
+      "id": "loginfeature;login-with-correct-username-and-password;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 5930308606,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 24,
+  "name": "Login with correct username and password",
+  "description": "",
+  "id": "loginfeature;login-with-correct-username-and-password;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "I navigate to the login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "I enter the following for Login",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 7
+    },
+    {
+      "cells": [
+        "justin",
+        "adminpassword"
+      ],
+      "line": 8
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "I click login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "I should see the userform page",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 12,
+      "value": "#  Scenario: Login with correct username and password to fail"
+    },
+    {
+      "line": 13,
+      "value": "#    Given I navigate to the login page"
+    },
+    {
+      "line": 14,
+      "value": "#    And I enter the following for Login"
+    },
+    {
+      "line": 15,
+      "value": "#      | username | password      |"
+    },
+    {
+      "line": 16,
+      "value": "#      | admin    | adminpassword |"
+    },
+    {
+      "line": 17,
+      "value": "#    And I click login button"
+    },
+    {
+      "line": 18,
+      "value": "#    Then I should see the userform page wrongly"
+    }
+  ],
+  "line": 20,
+  "name": "I should close the chrome page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStep.iNavigateToTheLoginPage()"
+});
+formatter.result({
+  "duration": 1796190894,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
+});
+formatter.result({
+  "duration": 339342224,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStep.iClickLoginButton()"
+});
+formatter.result({
+  "duration": 488565392,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStep.iShouldSeeTheUserformPage()"
+});
+formatter.result({
+  "duration": 50899407,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStep.closeChromePage()"
+});
+formatter.result({
+  "duration": 320708995,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 280403,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3469371033,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 25,
+  "name": "Login with correct username and password",
+  "description": "",
+  "id": "loginfeature;login-with-correct-username-and-password;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "I navigate to the login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "I enter the following for Login",
+  "matchedColumns": [
+    0,
+    1
+  ],
   "rows": [
     {
       "cells": [
@@ -54,117 +296,78 @@ formatter.step({
   "name": "I should see the userform page",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "LoginStep.iNavigateToTheLoginPage()"
-});
-formatter.result({
-  "duration": 2440320911,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
-});
-formatter.result({
-  "duration": 1017561176,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginStep.iClickLoginButton()"
-});
-formatter.result({
-  "duration": 636928762,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginStep.iShouldSeeTheUserformPage()"
-});
-formatter.result({
-  "duration": 85711658,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 156094,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 8759250579,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 12,
-  "name": "Login with correct username and password to fail",
-  "description": "",
-  "id": "loginfeature;login-with-correct-username-and-password-to-fail",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
 formatter.step({
-  "line": 13,
-  "name": "I navigate to the login page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "I enter the following for Login",
-  "rows": [
+  "comments": [
     {
-      "cells": [
-        "username",
-        "password"
-      ],
-      "line": 15
+      "line": 12,
+      "value": "#  Scenario: Login with correct username and password to fail"
     },
     {
-      "cells": [
-        "admin",
-        "adminpassword"
-      ],
-      "line": 16
+      "line": 13,
+      "value": "#    Given I navigate to the login page"
+    },
+    {
+      "line": 14,
+      "value": "#    And I enter the following for Login"
+    },
+    {
+      "line": 15,
+      "value": "#      | username | password      |"
+    },
+    {
+      "line": 16,
+      "value": "#      | admin    | adminpassword |"
+    },
+    {
+      "line": 17,
+      "value": "#    And I click login button"
+    },
+    {
+      "line": 18,
+      "value": "#    Then I should see the userform page wrongly"
     }
   ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 17,
-  "name": "I click login button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
-  "name": "I should see the userform page wrongly",
+  "line": 20,
+  "name": "I should close the chrome page",
   "keyword": "Then "
 });
 formatter.match({
   "location": "LoginStep.iNavigateToTheLoginPage()"
 });
 formatter.result({
-  "duration": 2067637298,
+  "duration": 1607124247,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
 });
 formatter.result({
-  "duration": 1026598356,
+  "duration": 291373536,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStep.iClickLoginButton()"
 });
 formatter.result({
-  "duration": 566324828,
+  "duration": 467151603,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginStep.iShouldSeeTheUserformPageWrongly()"
+  "location": "LoginStep.iShouldSeeTheUserformPage()"
 });
 formatter.result({
-  "duration": 198883824,
-  "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: {\"method\":\"id\",\"selector\":\"sdfgdsfsd\"}\nCommand duration or timeout: 188 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.0.1\u0027, revision: \u00271969d75\u0027, time: \u00272016-10-18 09:49:13 -0700\u0027\nSystem info: host: \u0027DESKTOP-6H7284L\u0027, ip: \u002710.0.75.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_77\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities [{applicationCacheEnabled\u003dtrue, rotatable\u003dfalse, handlesAlerts\u003dtrue, databaseEnabled\u003dtrue, version\u003d47.0.1, platform\u003dWINDOWS, nativeEvents\u003dfalse, acceptSslCerts\u003dtrue, webStorageEnabled\u003dtrue, locationContextEnabled\u003dtrue, browserName\u003dfirefox, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: 2a4d2ff9-76b7-4c52-b705-9689b74cda51\n*** Element info: {Using\u003did, value\u003dsdfgdsfsd}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:218)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)\r\n\tat steps.LoginStep.iShouldSeeTheUserformPageWrongly(LoginStep.java:71)\r\n\tat ✽.Then I should see the userform page wrongly(Login.feature:18)\r\nCaused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {\"method\":\"id\",\"selector\":\"sdfgdsfsd\"}\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.0.1\u0027, revision: \u00271969d75\u0027, time: \u00272016-10-18 09:49:13 -0700\u0027\nSystem info: host: \u0027DESKTOP-6H7284L\u0027, ip: \u002710.0.75.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_77\u0027\nDriver info: driver.version: unknown\r\n\tat \u003canonymous class\u003e.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11187)\r\n\tat \u003canonymous class\u003e.FirefoxDriver.prototype.findElement(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11196)\r\n\tat \u003canonymous class\u003e.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12705)\r\n\tat \u003canonymous class\u003e.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12710)\r\n\tat \u003canonymous class\u003e.DelayedCommand.prototype.execute/\u003c(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12652)\r\n",
-  "status": "failed"
+  "duration": 75220884,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStep.closeChromePage()"
+});
+formatter.result({
+  "duration": 277433921,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 141126,
+  "duration": 124770,
   "status": "passed"
 });
 });
